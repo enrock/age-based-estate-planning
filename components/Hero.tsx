@@ -20,9 +20,9 @@ const MetricDisplay = ({
   tooltipId: string
   onTooltipClick: (id: string) => void
 }) => (
-  <div className="flex flex-col items-center justify-center">
-    <div className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">{value}</div>
-    <div className="text-sm text-slate-600 dark:text-slate-300 flex items-center justify-center">
+  <div className="flex flex-col justify-center items-center">
+    <div className="mb-2 text-4xl font-bold text-slate-900 dark:text-slate-100">{value}</div>
+    <div className="flex justify-center items-center text-sm text-slate-600 dark:text-slate-300">
       {label}
       <button
         onClick={() => onTooltipClick(tooltipId)}
@@ -78,22 +78,22 @@ const Hero = () => {
   const lifeStage = getLifeStage(age)
 
   return (
-    <div className="min-h-screen pt-16 bg-slate-50 dark:bg-slate-900">
-      <div className="container mx-auto px-4">
+    <div className="pt-16 min-h-screen bg-slate-50 dark:bg-slate-900">
+      <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-4rem)] gap-12">
           {/* Left side - Content */}
           <div className="flex-1 max-w-xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl text-slate-900 dark:text-white">
               Transform Your Digital Experience
             </h1>
-            <h3 className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8">
+            <h3 className="mb-8 text-xl md:text-2xl text-slate-600 dark:text-slate-300">
               Create stunning, responsive websites with our modern UI components and intuitive design system.
             </h3>
             <div className="flex gap-4">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="px-8 text-lg">
                 Get Started
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
+              <Button size="lg" variant="outline" className="px-8 text-lg">
                 Learn More
               </Button>
             </div>
@@ -103,8 +103,7 @@ const Hero = () => {
           <div className="flex-1 w-full max-w-xl">
             <Card 
               className={`w-full bg-gradient-to-b from-white to-slate-100 dark:from-slate-800 dark:to-slate-900 shadow-xl relative overflow-hidden transition-all duration-300 ease-in-out z-[1] ${
-                activeTooltip ? "blur-sm" : ""
-              } before:content-[''] before:absolute before:inset-0 before:bg-[url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vecteezy_floral-circle-abstract_36290874.jpg-dMEK7TPLb2laWm16rMjCYQQHmbTKUs.jpeg')] before:bg-no-repeat before:bg-center before:bg-contain before:opacity-0 dark:before:opacity-[0.03] before:pointer-events-none before:transition-opacity duration-300`}
+                activeTooltip ? "blur-sm" : ""}`}
             >
               <ThemeToggle />
 
@@ -112,21 +111,21 @@ const Hero = () => {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wb-logo-black-KyM3yfA9uFJ5qaBIXXSOMrTeJcWqBc.png"
                   alt="WealthBerry"
-                  className="h-20 w-auto hidden dark:block"
+                  className="block w-auto h-20 dark:hidden"
                   width="400"
                   height="80"
                 />
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wb-logo-white-np4PNx269d9wxZf3AhUf5DcZsPhoM3.png"
                   alt="WealthBerry"
-                  className="h-20 w-auto dark:hidden block"
+                  className="hidden w-auto h-20 dark:block"
                   width="400"
                   height="80"
                 />
               </div>
               
               <CardContent className="p-8 pt-24">
-                <h1 className="text-3xl text-slate-900 dark:text-slate-100 mb-6 text-center">
+                <h1 className="mb-6 text-3xl text-center text-slate-900 dark:text-slate-100">
                   Estate Planning Calculator
                 </h1>
                 
@@ -168,14 +167,14 @@ const Hero = () => {
                       onClick={handleReset}
                       className="text-xs text-slate-600 hover:text-slate-800 dark:text-slate-300 dark:hover:text-slate-100"
                     >
-                      <RefreshCw className="w-3 h-3 mr-1" />
+                      <RefreshCw className="mr-1 w-3 h-3" />
                       Reset
                     </Button>
                   </div>
                 </div>
 
-                <div className="text-center mb-6">
-                  <div className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">
+                <div className="mb-6 text-center">
+                  <div className="mb-2 text-xl font-semibold text-slate-900 dark:text-slate-100">
                     Life Stage: {lifeStage}
                   </div>
                   <div className="text-sm text-slate-600 dark:text-slate-300">
@@ -199,7 +198,7 @@ const Hero = () => {
                       }`}
                       onClick={handleDownloadPDF}
                     >
-                      <Download className="w-5 h-5 mr-2" />
+                      <Download className="mr-2 w-5 h-5" />
                       Download 2025 Guide
                     </Button>
                   </div>
