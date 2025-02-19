@@ -12,12 +12,19 @@ const Navbar = () => {
           {/* Left side - Logo and Links */}
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png" // Update with your logo path
-                alt="Logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wb-logo-black-KyM3yfA9uFJ5qaBIXXSOMrTeJcWqBc.png"
+                alt="WealthBerry"
+                className="block h-10 w-auto dark:hidden"
+                width="120"
+                height="40"
+              />
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wb-logo-white-np4PNx269d9wxZf3AhUf5DcZsPhoM3.png"
+                alt="WealthBerry"
+                className="hidden h-10 w-auto dark:block"
+                width="120"
+                height="40"
               />
             </Link>
             

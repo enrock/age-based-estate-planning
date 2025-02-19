@@ -107,23 +107,6 @@ const Hero = () => {
             >
               <ThemeToggle />
 
-              <div className="absolute top-2 left-4">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wb-logo-black-KyM3yfA9uFJ5qaBIXXSOMrTeJcWqBc.png"
-                  alt="WealthBerry"
-                  className="block w-auto h-20 dark:hidden"
-                  width="400"
-                  height="80"
-                />
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wb-logo-white-np4PNx269d9wxZf3AhUf5DcZsPhoM3.png"
-                  alt="WealthBerry"
-                  className="hidden w-auto h-20 dark:block"
-                  width="400"
-                  height="80"
-                />
-              </div>
-              
               <CardContent className="p-8 pt-24">
                 <h1 className="mb-6 text-3xl text-center text-slate-900 dark:text-slate-100">
                   Estate Planning Calculator
@@ -172,7 +155,6 @@ const Hero = () => {
                     </Button>
                   </div>
                 </div>
-
                 <div className="mb-6 text-center">
                   <div className="mb-2 text-xl font-semibold text-slate-900 dark:text-slate-100">
                     Life Stage: {lifeStage}
